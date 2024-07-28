@@ -1,35 +1,30 @@
-# php-hello-world
-A simple hello-world for composer
+# PowerWorkshop DevOps
 
- [![Latest Stable Version](https://github.com/silarhi/php-hello-world/workflows/Tests/badge.svg)](https://github.com/silarhi/php-hello-world/workflows/Tests/badge.svg)
- [![Latest Stable Version](https://poser.pugx.org/silarhi/hello-world/v/stable)](https://packagist.org/packages/silarhi/hello-world)
-[![Total Downloads](https://poser.pugx.org/silarhi/hello-world/downloads)](https://packagist.org/packages/silarhi/hello-world)
-[![License](https://poser.pugx.org/silarhi/hello-world/license)](https://packagist.org/packages/silarhi/hello-world)
+## Step-by-Step Documentation
 
+### 1. Install Docker
+- Download and install Docker Desktop from [Docker](https://www.docker.com/products/docker-desktop).
+- Verify installation with `docker --version` and `docker-compose --version`.
 
-[![SymfonyInsight](https://insight.symfony.com/projects/5d582202-1186-4ce7-82c7-c4d3a2c11807/big.svg)](https://insight.symfony.com/projects/5d582202-1186-4ce7-82c7-c4d3a2c11807)
+### 2. Clone Repository
+- `git clone https://github.com/silarhi/php-hello-world.git`
+- `cd php-hello-world`
 
-Installation
-------------
+### 3. Create Dockerfile
+- Add the Dockerfile content as described.
 
-Install with composer
-``` bash
-composer require silarhi/hello-world
-```
+### 4. Build and Push Docker Image
+- Build: `docker build -t sankalpa111/php-hello-world:latest .`
+- Push: `docker push sankalpa111/php-hello-world:latest`
 
-Run composer update
-``` bash
-composer update silarhi/hello-world
-```
+### 5. Create Docker Compose File
+- Add `Docker-compose.yml` content as described.
 
-Usage
------
+### 6. Run Docker Compose
+- `docker-compose up`
 
-``` php
-require_once __DIR__ . '/vendor/autoload.php';
+### 7. Verify Application
+- Open [http://localhost:8080](http://localhost:8080)
 
-use Silarhi\Hello;
+### Screenshots
 
-$hello = new Hello();
-echo $hello->display() . "\n";
-```
